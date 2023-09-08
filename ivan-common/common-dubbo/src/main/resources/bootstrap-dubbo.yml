@@ -1,0 +1,33 @@
+dubbo:
+  application:
+    name: ${spring.application.name}
+    #qos-enable: false 这个配置不生效 dubbo后期版本已修复
+    qosEnable: false
+    # 元数据中心 local 本地 remote 远程
+    metadataType: local
+    # 可选值 interface、instance、all，默认是 all，即接口级地址、应用级地址都注册
+    register-mode: instance
+  registry:
+    address: nacos://nacos.junwen.site:8848
+    # group:
+    # https://cn.dubbo.apache.org/zh-cn/overview/reference/proposals/registry-config-meta/#%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83
+    #use-as-config-center: false
+    #use-as-metadata-center: false
+    parameters:
+      namespace: ivan-home
+
+
+# provider config
+---
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+
+
+# consumer config
+---
+dubbo:
+  consumer:
+    timeout: 10000
+    check: false

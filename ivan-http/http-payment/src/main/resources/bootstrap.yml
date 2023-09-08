@@ -1,0 +1,11 @@
+# Tomcat
+server:
+  port: 9001
+
+# Spring
+spring: 
+  application:
+    # 应用名称
+    name: http-payment
+  profiles:
+    include: nacos,dubbo

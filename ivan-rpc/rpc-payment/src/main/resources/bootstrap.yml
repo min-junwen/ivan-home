@@ -1,0 +1,7 @@
+# Spring
+spring: 
+  application:
+    # 应用名称
+    name: rpc-payment
+  profiles:
+    include: nacos,dubbo

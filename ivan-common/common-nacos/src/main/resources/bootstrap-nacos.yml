@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        # 配置中心地址
+        server-addr: nacos.junwen.site:8848
+        # 配置文件格式
+        file-extension: yml
+
+
